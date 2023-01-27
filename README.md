@@ -1,2 +1,2 @@
 # Javascript_Projects
- A folder fror Javascript Projects while attending The Tech Academy
+A repository for Javascript Projects while attending The Tech Academy
