@@ -29,8 +29,9 @@ function My_First_Function() {  // Defining a function and giving it a name
 }                   
 
 
-function Make_Blue(turn_font_blue) {    // Example of a keyword, a function name, and the parameters of it
-    turn_font_blue.style.color = 'blue'; // statement
+function ontoggle() {
+    var thanks = "Thanks for checking out my code!"; // creating an html ontoggle event when the user clicks on a details element
+    window.alert(thanks);
 }
 
 
