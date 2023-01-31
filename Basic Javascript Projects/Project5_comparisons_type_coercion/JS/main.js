@@ -68,13 +68,19 @@ document.write(5 > 10 || 10 > 20); // will return false, since neither statement
 
 // NOT operator checks to see if something is false. If false, 'true' will return
 function not_Function() {
-    document.getElementById("Not").innerHTML = !(20 > 10); // would return false, as 20 is not -not- greater than 10
+    document.getElementById("Not").innerHTML = !(20 > 10); // NOT -- true or not.
+                                                            // If ___ is false, "true" will be the result.
 }
 
 
 function not_Function() {
-    document.getElementById("doubleneg").innerHTML = !(5 > 10); // would return true, as 5 is not  greater than 10
+    document.getElementById("doubleneg").innerHTML = !(5 > 10); // Double Negative - is not NOT true
 }
+
+document.write(Bigger = (5 > 1) ? "Left number is bigger" : "Right number is bigger");
+                                                            // This states if 5 > 1 is TRUE, then display "Left # is bigger"
+                                                            // if the numbers are changed or the symbol < , the outcome will be FALSE
+
 
 
 
