@@ -205,7 +205,7 @@ function placeXOrO(squareNumber) {
                 if (y < y2) { y += 10; }
                 //This condition is similar to the one above
                 //This is necessary for the 6. 4 , 2 win conditions
-                if (x >= x2 && y > y2) { cancelAnimationFrame(animationLoop); }
+                if (x >= x2 && y >= y2) { cancelAnimationFrame(animationLoop); }
             }
 
             //This condition is similar to the one above
