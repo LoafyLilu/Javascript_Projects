@@ -1,0 +1,85 @@
+
+body {
+    background-color: rgb(154, 146, 155);
+
+}
+
+h1 {
+    font-family:Georgia, sans-serif;
+    color: rgb(51, 31, 71);
+    text-align: center;
+
+}
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(172, 91, 140);
+    
+}
+
+div {
+    background-color:rgb(87, 68, 90);
+}
+
+/* changed menuBR & frmMenu size to account for padding in columns*/
+#menuBG {
+    width: 615px;
+    height: 550px;
+    margin: 10px auto;
+}
+
+#frmMenu {
+    width: 615px;
+    height: 200px;
+    align-content: center;
+}
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 20px auto;
+    float: right;
+}
+
+/* added padding to columns so text wouldnt be right up against the bg line*/
+.left {
+    width: 200px;
+    height: 200px;
+    float: left;
+    padding-left: 5px;
+}
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+    padding-left: 5px;
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    float: right;
+    padding-left: 5px;
+}
+
+/* added padding */
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: left;
+    padding-left: 10px;
+}
+
+#cart {
+    top:0 ;margin:0px auto;
+    width: 600px;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin: 25px auto;
+}
