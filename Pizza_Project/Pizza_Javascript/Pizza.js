@@ -27,7 +27,6 @@ function getReceipt() {
     } else if (selectedSize === "Extra Large Pizza") {
         sizeTotal = 16;
     }
-    //holds the value as running total, to then be used in another funtion
     runningTotal = sizeTotal;
     console.log(selectedSize + " = $" + sizeTotal + ".00");
     console.log("size text1: " + text1);
@@ -37,32 +36,31 @@ function getReceipt() {
 }
 //starts the total toppings at 0, and adds each element in the topping array if it is checked. The value is then pushed to 
 //the consol to show what toppings were selected
-    function getTopping(runningTotal, text1) {
-        var toppingTotal = 0;
-        var selectedTopping = [];
-        var toppingArray = document.getElementsByClassName("toppings");
-        for (var j = 0; j < toppingArray.length; j++) {
-            if (toppingArray[j].checked) {
-                selectedTopping.push(toppingArray[j].value);
-                console.log("selected topping item: (" + toppingArray[j].value + ")");
-                text1 = text1 + toppingArray[j].value + "<br>";
-            }
+function getTopping(runningTotal, text1) {
+    var toppingTotal = 0;
+    var selectedTopping = [];
+    var toppingArray = document.getElementsByClassName("toppings");
+    for (var j = 0; j < toppingArray.length; j++) {
+        if (toppingArray[j].checked) {
+            selectedTopping.push(toppingArray[j].value);
+            console.log("selected topping item: (" + toppingArray[j].value + ")");
+            text1 = text1 + toppingArray[j].value + "<br>";
         }
-// accounting for the 1 free topping
-        var toppingCount = selectedTopping.length;
-        if (toppingCount > 1) {
-            toppingTotal = (toppingCount - 1);
-        } else {
-            toppingTotal = 0;
-        }
-//tells the document to display the string value of selected topppings, and the totalPrice, from runningTotal+ (toppingTotal -1)
-        runningTotal = (runningTotal + toppingTotal);
-        console.log("total selected topping items:" + toppingCount);
-        console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
-        console.log("topping text1: " + text1);
-        console.log("Purchase Total: " + "$" + runningTotal + ".00");
-        document.getElementById("showText").innerHTML = text1;
-        document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" +
-            runningTotal + ".00" + "</strong></h3>";
-    };
+    }
 
+    var toppingCount = selectedTopping.length;
+    if (toppingCount > 1) {
+        toppingTotal = (toppingCount - 1);
+    } else {
+        toppingTotal = 0;
+    }
+    //tells the document to display string value ot toppingCount, and the result of 
+    runningTotal = (runningTotal + toppingTotal);
+    console.log("total selected topping items:" + toppingCount);
+    console.log(toppingCount + " topping - 1 free topping = " + "$" + toppingTotal + ".00");
+    console.log("topping text1: " + text1);
+    console.log("Purchase Total: " + "$" + runningTotal + ".00");
+    document.getElementById("showText").innerHTML = text1;
+    document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" +
+        runningTotal + ".00" + "</strong></h3>";
+};
