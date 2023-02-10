@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        $("html").append(
+            "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                        <p id='4'>Paragraph 4 - Hover here to create a fadeOut effect</p>\
+                        <p id='5'>Paragraph 5 - Click here to change the color of all paragraphs!</p>\
+                    </div>\
+                </div>\
+            </body>"
+
+    // Examples appending elements in the document using jquery
+        );
+        $("#2").css({"color":"red"});
+        $("#3").click(function() {
+            $("h1").hide();
+        });
+
+        $("#4").hover(function(){
+            $("#4").fadeOut(1000);
+        });
+        $('#5').click(function(){
+            $('p').css({"color":"blue"});
+        });
+    });
+
+
+</script>
+
+</html>
