@@ -1,0 +1,1 @@
+This folder is for assignments and projects utilizing AJAX
